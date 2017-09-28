@@ -23,7 +23,38 @@
 
 	<form>
 		Ici viennent des champs: auteur, titre, description, couleur - pour générer ta couv.
-		<input type="submit" value="Generate">
+
+   <input type="text" name="serie" class="form_serie" placeholder="edition">
+
+        <input type="text" name="couv-description" class="form_couv-description" placeholder="description">
+
+        <input type="text" name="couv-number" class="form_couv-number" placeholder="nombre">
+
+        <input type="text" name="couv-author" class="form_couv-author" placeholder="auteur">
+
+        <input type="text" name="couv-title" class="form_couv-title" placeholder="titre">
+
+        <input type="button" value="Generate" class="submit">
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+$(".submit").click(function(){
+    var serie = $(".form_serie").val();
+    console.log(serie);
+    var couv_description = $(".form_couv-description").val();
+    var couv_number = $(".form_couv-number").val();
+    var couv_author = $(".form_couv-author").val();
+    var couv_title = $(".form_couv-title").val();
+    $(".serie").html(serie);
+        $(".couv-description").html(couv_description);
+        $(".couv-number").html(couv_number);
+        $(".couv-author").html(couv_author);
+        $(".couv-title").html(couv_title);
+});
+
+</script>
 	</form>
 </body>
 </html>
